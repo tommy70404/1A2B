@@ -1,0 +1,82 @@
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: radial-gradient(circle , rgba(255, 255, 255, .9), rgba(0, 0, 0, .9));
+    z-index: 5;
+    
+    /* 開頭遊戲介紹黃色卷軸紙 */
+    &__container {
+        position: absolute;
+        padding: 70px;
+        width: 500px;
+        height: 450px;
+        top: 50%;
+        left: 50%;
+        opacity: 2;
+        transform: translateX(-50%) translateY(-50%);
+        background: url('../../assets/images/paper-wide.png')  top left no-repeat;;
+        background-size: 500px 450px;
+    }
+
+    &__title {
+        position: relative;
+        text-align: center;
+        font-size: 2.5rem;
+        top: 0;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    &__description {
+        position: relative;
+        top: 0;
+    }
+
+    &--fontNormal {
+        font-size: 1.5rem;
+    }
+
+    &--fontRed {
+        color: $mainRed;
+    }
+
+    &--fontMedium {
+        font-size: 2.3rem;
+    }
+
+    &--fontLarger {
+        font-size: 3.5rem;
+    }
+
+    &--invisible {
+        display: none;
+        visibility: 0;
+    }
+
+    /* 開頭介紹操縱鈕 */
+
+    &__btn {
+        &__next {
+            position: absolute;
+            display: inline-block;
+            top: 50%;
+            left: 7%;
+            transform: translateY(-50%);
+        }
+        
+        &__previous {
+            position: absolute;
+            display: inline-block;
+            top: 50%;
+            right: 7%;
+            transform: translateY(-50%);
+            
+        }
+    }
+
+
+}

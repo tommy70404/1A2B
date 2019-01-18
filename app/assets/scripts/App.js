@@ -51,8 +51,11 @@ let AnswerController = (() => {
 
             //比對答案並得出提示
             let compareAnswer = new Compare();
+            compareAnswer.compareAnswer(InputNum, GameController.getRandom());
+
 
             //顯示提示
+            console.log(compareAnswer.hint);
             Views.showHint(compareAnswer.hint);
 
             //新增inputArea 並移除input-active class

@@ -534,3 +534,102 @@ table { border-collapse: collapse; border-spacing: 0; }
         color: red;
     }
 }
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: radial-gradient(circle , rgba(255, 255, 255, .9), rgba(0, 0, 0, .9));
+    z-index: 5;
+
+
+}
+
+
+/* 開頭遊戲介紹黃色卷軸紙 */
+
+
+.modal__container {
+        position: absolute;
+        padding: 70px;
+        width: 500px;
+        height: 450px;
+        top: 50%;
+        left: 50%;
+        opacity: 2;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
+        background: url('../../assets/images/paper-wide.png')  top left no-repeat;;
+        background-size: 500px 450px;
+    }
+
+
+.modal__title {
+        position: relative;
+        text-align: center;
+        font-size: 2.5rem;
+        top: 0;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
+    }
+
+
+.modal__description {
+        position: relative;
+        top: 0;
+    }
+
+
+.modal--fontNormal {
+        font-size: 1.5rem;
+    }
+
+
+.modal--fontRed {
+        color: #751B1B;
+    }
+
+
+.modal--fontMedium {
+        font-size: 2.3rem;
+    }
+
+
+.modal--fontLarger {
+        font-size: 3.5rem;
+    }
+
+
+.modal--invisible {
+        display: none;
+        visibility: 0;
+    }
+
+
+/* 開頭介紹操縱鈕 */
+
+
+.modal__btn__next {
+            position: absolute;
+            display: inline-block;
+            top: 50%;
+            left: 7%;
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+        }
+
+
+.modal__btn__previous {
+            position: absolute;
+            display: inline-block;
+            top: 50%;
+            right: 7%;
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+            
+        }
