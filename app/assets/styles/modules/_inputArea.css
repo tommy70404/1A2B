@@ -1,0 +1,79 @@
+.inputArea {
+    position: relative;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    width: 70%;
+    height: 40%;
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    transform: translateX(-2%);
+
+    @mixin atLarge {
+        width: 75%;
+    }
+
+    &::-webkit-scrollbar {
+        width: 20px;
+
+        background: transparent;
+        &-thumb {
+            background-image: -webkit-gradient(linear,
+            left bottom,
+            left top,
+            color-stop(.2, transparent),
+            color-stop(0.86, $mainRed));
+            border-radius: 10px;
+
+            &-piece {
+                background: black;
+            }
+        }
+        
+    }
+
+    ul {
+        width: 90%;
+
+        li {
+            position: relative;
+            .input {
+                position: absolute;
+                top: 10px;
+                left: 80px;
+                width: 200px;
+                height: 50px;
+                background-color: transparent;
+                font-size: 3rem;
+                letter-spacing: 1rem;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+            .inputHint {
+                position: absolute;
+                top: 10px;
+                right: 30px;
+                width: 170px;
+                height: 50px;
+                background-color: transparent;
+                color: $mainRed;
+                font-size: 4rem;
+                letter-spacing: 1rem;
+            }
+        }
+
+        @mixin atLarge {
+            width: 90%;
+        }
+    }
+}
+
+
+
+
+
+

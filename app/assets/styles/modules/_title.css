@@ -1,0 +1,15 @@
+.title {
+    position: relative;
+    padding-top: 7%;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 22%;
+    min-height: 97px;
+
+    span {
+        margin: 0 auto;
+    }
+    @mixin atTall {
+        padding-top: 9%;
+    }
+}

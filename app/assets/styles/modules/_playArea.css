@@ -1,0 +1,26 @@
+.playArea {
+    position: absolute;
+    min-width: 768px;
+    height: 98%;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(.7);
+    overflow: visible;
+    
+    @mixin tooSmall {
+        transform: translateY(-50%) translateX(-50%);
+    }
+
+    &_image {
+        background: url('../../assets/images/paper-wide.png') center center no-repeat;
+        background-size: contain;
+        position: absolute;
+        z-index: 0;
+    }
+
+
+    
+    
+
+}

@@ -1,0 +1,64 @@
+.answerArea {
+    padding: 0 110px;
+    margin-top: -2%;
+    text-align: center;
+
+    & > div {
+        width: 60%;
+        display: inline-block;
+        font-size: 2rem;
+        height: 100%;
+        
+        
+        & p {
+            position: relative;
+            /* top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%); */
+            display: inline-block;
+            line-height: 100%;
+
+        }
+        
+    }
+
+    span  {
+        position: relative;
+        margin-left: 10px;
+        display: inline-block;
+        cursor: pointer;
+        span {
+            position: absolute;
+            top: 8px;
+            left: -7px;
+            transform-origin: center;
+            transform:  scale(.9);
+        }
+    }
+
+    
+    .hints-red {
+        color: $mainRed;
+        /* display: inline; */
+        animation: showUp .5s ease-in-out;
+    }  
+    .hints-black {
+        color: black;
+        /* display: inline; */
+        animation: showUp .5s ease-in-out;
+    }  
+    
+    
+    @mixin atTall {
+        margin-top: 1%;
+    }
+}
+
+@keyframes showUp {
+    from {
+        opacity:0;
+        color: red;
+    }
+}
+
+

@@ -1,0 +1,26 @@
+
+
+@define-mixin atLarge {
+    @media (min-width: 1400px) {
+        @mixin-content;
+    } 
+}
+
+@define-mixin tooSmall {
+    @media (min-height: 600px) {
+        @mixin-content;
+    } 
+}
+@define-mixin atTall {
+    @media (min-height: 670px) {
+        @mixin-content;
+    } 
+}
+
+@define-mixin clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}

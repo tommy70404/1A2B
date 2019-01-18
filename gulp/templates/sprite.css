@@ -1,0 +1,17 @@
+/* 此為gulp自動化整集svg檔的模板，請小心更改此處  */
+
+{{#shapes}}
+    {{#first}}
+    .icon {
+        background-image: url('../../assets/images/sprites/{{{sprite}}}');
+        background-repeat:  no-repeat;
+        display: block;
+    }
+    {{/first}}
+    .icon--{{base}} {
+        width: {{width.outer}}px;
+        height: {{height.outer}}px;
+        background-position: {{position.relative.xy}};
+    }
+{{/shapes}}
+  
