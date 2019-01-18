@@ -137,7 +137,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 
 .icon {
-        background-image: url('../../assets/images/sprites/sprite-a683c5f3.svg');
+        background-image: url('../../assets/images/sprites/sprite-8cfa28d0.svg');
         background-repeat:  no-repeat;
         display: block;
     }
@@ -146,21 +146,21 @@ table { border-collapse: collapse; border-spacing: 0; }
 .icon--O {
         width: 31.65px;
         height: 30.08px;
-        background-position: 80.81127535235476% 54.71709280303029%;
+        background-position: 96.4775982582789% 35.42554450757576%;
     }
 
 
 .icon--X {
         width: 30.92px;
         height: 29.56px;
-        background-position: 87.917543699094% 54.63302210140644%;
+        background-position: 96.31646380525305% 44.25895284245361%;
     }
 
 
 .icon--btn {
         width: 52.12px;
         height: 56.51px;
-        background-position: 99.37001057997499% 38.43141031814825%;
+        background-position: 98.67269404635952% 59.3598510385566%;
     }
 
 
@@ -181,7 +181,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 .icon--fingerprint {
         width: 57.74px;
         height: 58.31px;
-        background-position: 86.6572417491347% 38.654783816074136%;
+        background-position: 85.95037293423682% 59.70486615647905%;
     }
 
 
@@ -199,73 +199,94 @@ table { border-collapse: collapse; border-spacing: 0; }
     }
 
 
+.icon--next {
+        width: 32.73px;
+        height: 61.22px;
+        background-position: 81.67803891837251% 39.02144859508443%;
+    }
+
+
 .icon--numbers-0 {
         width: 24.34px;
         height: 27.65px;
-        background-position: 89.56633458053464% 63.16438959894225%;
+        background-position: 53.7776675832845% 88.48244454238282%;
     }
 
 
 .icon--numbers-1 {
         width: 13.64px;
         height: 27.45px;
-        background-position: 97.74628048243683% 63.12729408310086%;
+        background-position: 99.61924465181794% 35.151960064601376%;
     }
 
 
 .icon--numbers-2 {
         width: 23.84px;
         height: 28.41px;
-        background-position: 84.0980727665706% 63.305751052740064%;
+        background-position: 48.34969380403458% 88.68046762272151%;
     }
 
 
 .icon--numbers-3 {
         width: 23.25px;
         height: 27.3px;
-        background-position: 57.94491287240023% 78.99911945993541%;
+        background-position: 80.30129286115795% 78.99911945993541%;
     }
 
 
 .icon--numbers-4 {
         width: 22.93px;
         height: 27.43px;
-        background-position: 48.250836946997104% 79.02927445165457%;
+        background-position: 64.11126339676906% 88.42528701882138%;
     }
 
 
 .icon--numbers-5 {
         width: 28.42px;
         height: 27.38px;
-        background-position: 99.8589562764457% 54.28336562738534%;
+        background-position: 70.22385003867328% 79.01767365392519%;
     }
 
 
 .icon--numbers-6 {
         width: 23.77px;
         height: 28.89px;
-        background-position: 93.46284582310965% 54.52508035740614%;
+        background-position: 64.13794655921483% 79.36952611247087%;
     }
 
 
 .icon--numbers-7 {
         width: 20.91px;
         height: 29.84px;
-        background-position: 78.87002616922767% 63.573456352022696%;
+        background-position: 59.05075040819522% 79.59250059143599%;
     }
 
 
 .icon--numbers-8 {
         width: 20.03px;
         height: 27.38px;
-        background-position: 53.057124361006316% 79.01767365392519%;
+        background-position: 75.2528071076188% 79.01767365392519%;
     }
 
 
 .icon--numbers-9 {
         width: 22.41px;
         height: 27.49px;
-        background-position: 94.64081330370969% 63.13470970015564%;
+        background-position: 59.00715904755493% 88.4408681096003%;
+    }
+
+
+.icon--previous {
+        width: 32.73px;
+        height: 61.22px;
+        background-position: 89.19750959174766% 39.02144859508443%;
+    }
+
+
+.icon--skip {
+        width: 49.26px;
+        height: 32px;
+        background-position: 51.284806801356446% 80.10416666666666%;
     }
 
 
@@ -542,7 +563,7 @@ table { border-collapse: collapse; border-spacing: 0; }
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: radial-gradient(circle , rgba(255, 255, 255, .9), rgba(0, 0, 0, .9));
+    background-image: radial-gradient(circle , rgba(255, 255, 255, .9), rgba(124, 89, 0, 0.9));
     z-index: 5;
 
 
@@ -554,7 +575,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .modal__container {
         position: absolute;
-        padding: 70px;
+        padding: 50px 70px;
         width: 500px;
         height: 450px;
         top: 50%;
@@ -611,14 +632,58 @@ table { border-collapse: collapse; border-spacing: 0; }
     }
 
 
+.modal__figure1 {
+        position: relative;
+        background: url('../../images/figure1.png') center center no-repeat;
+        background-size: 100% 100%;
+        left: 8%;
+        -webkit-transform: translateY(12%);
+                transform: translateY(12%);      
+    }
+
+
+.modal__figure2 {
+        width: 80%;
+        position: relative;
+        background: url('../../images/figure2.png') center center no-repeat;
+        left: 8%;
+        -webkit-transform: translateY(12%);
+                transform: translateY(12%);      
+    }
+
+
+.modal__figure3 {
+        width: 90%;
+        position: relative;
+        background: url('../../images/figure3.png') center center no-repeat;
+        left: 5%;
+        -webkit-transform: translateY(-4%);
+                transform: translateY(-4%);      
+    }
+
+
 /* 開頭介紹操縱鈕 */
+
+
+.modal__btn {
+        opacity: .3;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+    }
+
+
+.modal__btn:hover {
+            opacity: 1;
+            -webkit-transform: translateY(-50%) translateX(4px);
+                    transform: translateY(-50%) translateX(4px);
+        }
 
 
 .modal__btn__next {
             position: absolute;
             display: inline-block;
             top: 50%;
-            left: 7%;
+            right: 7%;
             -webkit-transform: translateY(-50%);
                     transform: translateY(-50%);
         }
@@ -628,8 +693,17 @@ table { border-collapse: collapse; border-spacing: 0; }
             position: absolute;
             display: inline-block;
             top: 50%;
-            right: 7%;
+            left: 7%;
             -webkit-transform: translateY(-50%);
                     transform: translateY(-50%);
-            
+        }
+
+
+.modal__btn__skip {
+            position: absolute;
+            display: inline-block;
+            top: 14%;
+            right: 7%;
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%); 
         }

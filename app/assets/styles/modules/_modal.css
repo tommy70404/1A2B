@@ -4,13 +4,13 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: radial-gradient(circle , rgba(255, 255, 255, .9), rgba(0, 0, 0, .9));
+    background-image: radial-gradient(circle , rgba(255, 255, 255, .9), rgba(124, 89, 0, 0.9));
     z-index: 5;
     
     /* 開頭遊戲介紹黃色卷軸紙 */
     &__container {
         position: absolute;
-        padding: 70px;
+        padding: 50px 70px;
         width: 500px;
         height: 450px;
         top: 50%;
@@ -57,14 +57,47 @@
         visibility: 0;
     }
 
+
+    &__figure1 {
+        position: relative;
+        background: url('../../images/figure1.png') center center no-repeat;
+        background-size: 100% 100%;
+        left: 8%;
+        transform: translateY(12%);      
+    }
+
+    &__figure2 {
+        width: 80%;
+        position: relative;
+        background: url('../../images/figure2.png') center center no-repeat;
+        left: 8%;
+        transform: translateY(12%);      
+    }
+
+    &__figure3 {
+        width: 90%;
+        position: relative;
+        background: url('../../images/figure3.png') center center no-repeat;
+        left: 5%;
+        transform: translateY(-4%);      
+    }
+
     /* 開頭介紹操縱鈕 */
 
     &__btn {
+        opacity: .3;
+        transition: all .2s ease-in-out;
+        
+        &:hover {
+            opacity: 1;
+            transform: translateY(-50%) translateX(4px);
+        }
+
         &__next {
             position: absolute;
             display: inline-block;
             top: 50%;
-            left: 7%;
+            right: 7%;
             transform: translateY(-50%);
         }
         
@@ -72,9 +105,16 @@
             position: absolute;
             display: inline-block;
             top: 50%;
-            right: 7%;
+            left: 7%;
             transform: translateY(-50%);
-            
+        }
+
+        &__skip {
+            position: absolute;
+            display: inline-block;
+            top: 14%;
+            right: 7%;
+            transform: translateY(-50%); 
         }
     }
 
