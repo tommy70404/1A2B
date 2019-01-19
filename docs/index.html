@@ -6,7 +6,7 @@
     <meta name="keyword" content="1A2B, puzzle, game, treasure">
     <meta name="description" content="This is a game about finding the secret number of the map">
     <title>1A2B</title>
-    <link rel="stylesheet" href="assets/styles/styles-c28da73a89.css"/>
+    <link rel="stylesheet" href="assets/styles/styles-f36350db68.css"/>
 </head>
 <body>
     <div class="background background_image">
@@ -37,29 +37,48 @@
                         <span class="icon icon--inputArea-1950"></span>
                         <input class="input input-active" type="text" maxlength="4" value="" autofocus>
                         <div class="inputHint inputHint-active"></div>
+
+                        <!-- <span class="icon icon--inputArea-1950"></span>
+                        <input class="input input-active" type="text" maxlength="4" value="" autofocus>
+                        <div class="inputHint inputHint-active"></div> -->
+                        
+                        <!-- <span class="icon icon--inputArea-1950"></span>
+                        <input class="input input-active" type="text" maxlength="4" value="" autofocus>
+                        <div class="inputHint inputHint-active"></div> -->
                     </li>
                 </ul>
             </div>
             <div class="answerArea">
-                <div class="answerAreaHint">type in 4 numbers<br>nurepeated number</div>
+                <div class="answerAreaHint">type in 4 numbers<br>unrepeated number</div>
                 <span class="icon icon--btn-1950"></span>
             </div>
         </div>
     </div>
 
     
-    <div class="modal modal--invisible">
+    <div class="modal">
         <div class="modal__container">
-            <h1 class="modal__title  modal--invisible">Welcome to <br><span class="modal--fontRed modal--fontLarger">1A2B</span><br> puzzle game</h1>
-            <p class="modal__description modal--fontNormal">in this game, you need to find the secret code which is made up of <span class="modal--fontRed modal--fontMedium"> 4 numbers.</span>
+
+            <h1 class="modal__title">Welcome to <br><span class="modal--fontRed modal--fontLarger">1A2B</span><br> puzzle game</h1>
+
+            <p class="modal__description modal--fontNormal modal--invisible modal--invisible">in this game, you need to find the secret code which is made up of <span class="modal--fontRed modal--fontMedium"> 4 numbers.</span><br>
+            <img class="modal__figure1" src="./assets/images/figure1.png"></p>
+
+            <p class="modal__description modal--fontNormal  modal--invisible"> Each time you submit your answer, the magic treasure map will tell you hints about the final answer. so keep trying!<br>
+            <img class="modal__figure2" src="./assets/images/figure2.png">
             </p>
-            <p class="modal__description modal--fontNormal modal--invisible"> Each time you submit your answer, the magic treasure map will tell you hints about the final answer. so keep trying!
+
+            <p class="modal__description modal--fontNormal modal--invisible"> finally, it's time for you to make decision. to be rich or die.<br>
+            <img class="modal__figure3" src="./assets/images/figure3.png">
             </p>
-            <span class="icon icon--O modal__btn__next"></span>
-            <span class="icon icon--X modal__btn__previous"></span>
+
+
+            <span class="icon icon--next modal__btn modal__btn__next"></span>
+            <span class="icon icon--previous modal__btn modal__btn__previous modal--invisible"></span>
+            <span class="icon icon--skip modal__btn modal__btn__skip"></span>
         </div>
     </div>
     
-    <script src="assets/scripts/App-6d8d8382e9.js"></script>
+    <script src="assets/scripts/App-92527cfa0b.js"></script>
 </body>
 </html>
