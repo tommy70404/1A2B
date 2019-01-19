@@ -5,20 +5,24 @@
     bottom: 0;
     left: 0;
     background-image: radial-gradient(circle , rgba(255, 255, 255, .9), rgba(124, 89, 0, 0.9));
+    display: inline;
+    opacity: 1;
+    transform: translateX(0);
     z-index: 5;
+    transition: all .5s ease-in;
     
     /* 開頭遊戲介紹黃色卷軸紙 */
     &__container {
         position: absolute;
         padding: 50px 70px;
-        width: 500px;
+        width: 550px;
         height: 450px;
         top: 50%;
         left: 50%;
-        opacity: 2;
+        opacity: 1;
         transform: translateX(-50%) translateY(-50%);
         background: url('../../assets/images/paper-wide.png')  top left no-repeat;;
-        background-size: 500px 450px;
+        background-size: 550px 450px;
     }
 
     &__title {
@@ -32,8 +36,13 @@
     }
 
     &__description {
-        position: relative;
-        top: 0;
+        position: absolute;
+        width: 400px;
+        top: 10%;
+        left: 10%;
+        opacity: 1;
+        transform: translateX(0);
+        transition: all .5s ease-in-out;
     }
 
     &--fontNormal {
@@ -53,33 +62,36 @@
     }
 
     &--invisible {
-        display: none;
-        visibility: 0;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-15px);
     }
 
 
+
     &__figure1 {
-        position: relative;
-        background: url('../../images/figure1.png') center center no-repeat;
-        background-size: 100% 100%;
-        left: 8%;
-        transform: translateY(12%);      
+        position: absolute;
+        /* background: url('../../images/figure1.png') center center no-repeat; */
+        top: 140%;
+        left: 15%;     
     }
 
     &__figure2 {
         width: 80%;
-        position: relative;
-        background: url('../../images/figure2.png') center center no-repeat;
-        left: 8%;
-        transform: translateY(12%);      
+        position: absolute;
+        /* background: url('../../images/figure2.png') center center no-repeat; */
+        top: 120%;
+        left: 13%;
+
     }
 
     &__figure3 {
-        width: 90%;
-        position: relative;
-        background: url('../../images/figure3.png') center center no-repeat;
-        left: 5%;
-        transform: translateY(-4%);      
+        width: 80%;
+        position: absolute;
+        /* background: url('../../images/figure3.png') center center no-repeat; */
+        top: 120%;
+        left: 15%;
+
     }
 
     /* 開頭介紹操縱鈕 */
@@ -118,5 +130,31 @@
         }
     }
 
+}
 
+@keyframes wipeOut {
+    0% {
+        display: block;
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        display: none;
+        transform: translateX(-5px);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    
+    0% {
+        display: none;
+        transform: translateX(-5px);
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

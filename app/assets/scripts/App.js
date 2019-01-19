@@ -3,7 +3,9 @@
 import RandomNum from "./modules/RandomNum";
 import GetInput from "./modules/GetInput";
 import Compare from "./modules/Compare";
+import Modal from "./modules/Modal";
 import * as Views from "./modules/Views";
+
 
 
 
@@ -13,6 +15,9 @@ let GameController = (() => {
 
     let answer = new RandomNum();
     answer.getRandom();
+    //建構Modal實例
+    let modal = new Modal();
+
     //focus在第一個輸入區
     document.querySelector(".input-active").focus();
 
@@ -31,6 +36,9 @@ let GameController = (() => {
 
         changeRounds: function(number) {
             rounds += number;
+        },
+        getModel: function() {
+            return modal;
         }
     }
     //挑選隨機數字
@@ -96,4 +104,21 @@ document.querySelector('.answerArea > span').addEventListener('mouseenter',e =>{
 })
 document.querySelector('.answerArea > span').addEventListener('mouseleave',e =>{
     Views.btnMethod(e.target , 'remove');
+})
+
+//Modal控制視窗按鈕，next, previous, skip
+document.querySelector('.modal__btn__next').addEventListener('click', e=> {
+    let modal = GameController.getModel();
+    modal.nextPage();
+    Views.modalBtnMethod(modal.page);
+
+})
+document.querySelector('.modal__btn__previous').addEventListener('click', e=> {
+    let modal = GameController.getModel();
+    modal.previousPage();
+    Views.modalBtnMethod(modal.page);
+})
+document.querySelector('.modal__btn__skip').addEventListener('click', e=> {
+    let modal = GameController.getModel();
+    Views.modalBtnMethod(4);
 })

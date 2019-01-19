@@ -34,7 +34,7 @@ export const report = (event, elements = undefined) => {
     }else if(event == 'repeated') {
         document.querySelector('.answerAreaHint').innerHTML = `<p class="hints-red">your numbers are repeated</p>`
     }else if(event == 'correct') {
-        document.querySelector('.answerAreaHint').innerHTML = `<p class="hints-red">you found the secret treasure in <span style="color: #751B1B;">${elements}</span> rounds</p> `
+        document.querySelector('.answerAreaHint').innerHTML = `<p class="hints-gold">you found the secret treasure in ${elements} rounds</p> `
     }else if(event == 1) {
         document.querySelector('.answerAreaHint').innerHTML = `<p class="hints-black">Try harder</p>`
     }else if(event == 2) {
@@ -67,5 +67,31 @@ export const btnMethod = (e, method) => {
         e.innerHTML = `<span class="icon icon--fingerprint"></span>`;
     }else if(method == 'remove'){
         e.removeChild(e.childNodes[0]);
+    }
+}
+
+export const modalBtnMethod = (page) => {
+    const allPages = Array.from(document.querySelectorAll('.modal__container > *')).splice(0 ,4);
+    console.log(allPages);
+    allPages.forEach(element => element.classList.add('modal--invisible'));
+    switch(page) {
+        case 0 :
+            allPages[0].classList.remove('modal--invisible').add('modal--visible');
+            document.querySelector('.modal__btn__previous').classList.add('modal--invisible');
+            break;
+        case 1 :
+            allPages[1].classList.remove('modal--invisible');
+            document.querySelector('.modal__btn__previous').classList.remove('modal--invisible');
+            break;
+        case 2 :
+            allPages[2].classList.remove('modal--invisible');
+            break;
+        case 3 :
+            allPages[3].classList.remove('modal--invisible');
+            break;
+        case 4 :
+            document.querySelector('.modal').classList.add('modal--invisible');
+            break;
+            
     }
 }
