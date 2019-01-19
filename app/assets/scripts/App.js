@@ -74,8 +74,8 @@ let AnswerController = (() => {
             }else {
                 Views.createInputArea();
                 Views.report(Math.floor(Math.random() * 4), GameController.getRounds())
+                document.querySelector(".input-active").focus();
             }
-            document.querySelector(".input-active").focus();
         }
     }
 

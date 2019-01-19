@@ -13,14 +13,13 @@ export const createInputArea = () => {
 }
 
 export const showHint = (hint) => {
-    document.querySelector('.inputHint-active').textContent = `${hint[0]}A${hint[1]}B`;
+    document.querySelector('.inputHint-active').innerHTML = `<p class="inputHint--animateIt">${hint[0]}A${hint[1]}B</p>`;
 };
 
 export const delActive = () => {
 
     document.querySelector('.input-active').setAttribute("disabled","");
     document.querySelector('.input-active').classList.remove('input-active');
-    
     document.querySelector('.inputHint-active').classList.remove('inputHint-active')
 
 }
@@ -34,7 +33,9 @@ export const report = (event, elements = undefined) => {
     }else if(event == 'repeated') {
         document.querySelector('.answerAreaHint').innerHTML = `<p class="hints-red">your numbers are repeated</p>`
     }else if(event == 'correct') {
-        document.querySelector('.answerAreaHint').innerHTML = `<p class="hints-gold">you found the secret treasure in ${elements} rounds</p> `
+        document.querySelector('.inputArea li:last-child input').classList.add('inputHint--correct');
+        document.querySelector('.answerAreaHint').innerHTML = `<p class="hints-goldAnimated">you found the secret treasure in ${elements} rounds</p> `;
+        console.log(document.querySelector(".icon--btn-1950").remove())
     }else if(event == 1) {
         document.querySelector('.answerAreaHint').innerHTML = `<p class="hints-black">Try harder</p>`
     }else if(event == 2) {

@@ -63,6 +63,18 @@
                 color: $mainRed;
                 font-size: 4rem;
                 letter-spacing: 1rem;
+
+                &--correct:disabled {
+                    background: -webkit-linear-gradient(rgb(251, 177, 60), rgb(255, 255, 0));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+                }
+
+                &--animateIt {
+                    transform: translateY(-5px);
+                    animation: fadeUp 3s;
+                }
             }
         }
 

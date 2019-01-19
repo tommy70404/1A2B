@@ -36,11 +36,12 @@
         }
     }
 
-    .hints-gold {
+    .hints-goldAnimated {
         background: -webkit-linear-gradient(rgb(251, 177, 60), rgb(255, 255, 0));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: showUp .5s ease-in-out;
+        font-weight: 550;
     }
 
     .hints-red {
