@@ -22,8 +22,8 @@ padding: 0;
 
 @font-face {
     font-family: Requiem;
-    src: local("requiem"),
-        url("../../assets/images/Requiem.ttf") format("truetype");
+    src: local("requiem");
+    src: url("../../assets/images/Requiem.ttf") format("truetype");
 }
 
 

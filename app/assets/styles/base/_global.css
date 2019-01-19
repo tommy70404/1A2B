@@ -18,8 +18,8 @@ padding: 0;
 /** 設置預設字體 **/
 @font-face {
     font-family: Requiem;
-    src: local("requiem"),
-        url("../../assets/images/Requiem.ttf") format("truetype");
+    src: local("requiem");
+    src: url("../../assets/images/Requiem.ttf") format("truetype");
 }
 
 body,button, input, select, textarea {
