@@ -7,7 +7,7 @@ export default class GetInput {
         this.InputArea = document.querySelector('.input--active');
         this.InputNum; 
     }
-    
+    //取得每輪的input值，並執行檢查是否符合輸入條件，並回傳不同的ERROR代稱。包含：不足數字、非數字字元和數字重複
     getInputNum() {
         let numArray = this.InputArea.value.split("").map(numString => {
             if(isNaN(numString)){
@@ -17,7 +17,7 @@ export default class GetInput {
         });
 
         if(numArray.length != 4){
-            return '4Num';
+            return 'need4Num';
         }else if(numArray.includes('NaN')){
             return 'NaN';
         }

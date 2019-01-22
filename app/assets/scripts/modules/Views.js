@@ -1,6 +1,6 @@
 // import {elements} from './base.js';
 
-
+//顯示接續回合的input區域
 export const createInputArea = () => {
     const markup = `
     <li>
@@ -12,10 +12,12 @@ export const createInputArea = () => {
     document.querySelector('.inputArea > ul').insertAdjacentHTML('beforeend',markup);
 }
 
+// 顯示當回合的提示
 export const showHint = (hint) => {
     document.querySelector('.inputHint--active').innerHTML = `<p class="inputHint--animateIt">${hint[0]}A${hint[1]}B</p>`;
 };
 
+// 交接active tag至接續回合的input區域
 export const delActive = () => {
 
     document.querySelector('.input--active').setAttribute("disabled","");
@@ -24,11 +26,12 @@ export const delActive = () => {
 
 }
 
+// 處理最終答案顯示區域顯示之內容
 export const report = (event, elements = undefined) => {
     if(event == 'NaN') {
         document.querySelector('.answerAreaHint').innerHTML = `<p class="hints-red"
         >Only numbers allow!</div>`;
-    }else if(event == '4Num') {
+    }else if(event == 'need4Num') {
         document.querySelector('.answerAreaHint').innerHTML = `<p class="hints-red">Only accept 4 numbers!</p>`
     }else if(event == 'repeated') {
         document.querySelector('.answerAreaHint').innerHTML = `<p class="hints-red">your numbers are repeated</p>`
@@ -44,9 +47,10 @@ export const report = (event, elements = undefined) => {
             document.querySelector('.answerAreaHint').innerHTML = `<p class="hints-black">you have tried <span style="color: #751B1B;">${elements}</span> rounds </p>`
     }else if(event == 0) {
         document.querySelector('.answerAreaHint').innerHTML = `<p class="hints-black">well, well, well <br> it's a good guess</p>`
-}
+    }
 }
 
+// 控制輔助數字為 O or X 
 export const yesOrNo = (e, clickTimes) => {
     if(e.target.localName == "ul"){
     }else {
@@ -63,6 +67,7 @@ export const yesOrNo = (e, clickTimes) => {
     }
 }
 
+// 控制提交按鈕切換是否顯示指紋
 export const btnMethod = (e, method) => {
     if(method == 'add'){
         e.innerHTML = `<span class="icon icon--fingerprint"></span>`;
@@ -71,6 +76,7 @@ export const btnMethod = (e, method) => {
     }
 }
 
+// 控制開頭介紹頁面切換
 export const modalBtnMethod = (page) => {
     const allPages = Array.from(document.querySelectorAll('.modal__container > *')).splice(0 ,4);
     console.log(allPages);

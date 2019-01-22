@@ -8,7 +8,6 @@ import * as Views from "./modules/Views";
 
 
 
-
 let GameController = (() => {
     let clickTimes = [0,0,0,0,0,0,0,0,0,0];
     let rounds = 0;
@@ -92,6 +91,7 @@ window.addEventListener('keypress', e => {
 document.querySelector('.icon--btn-1950').addEventListener('click', e => {
     AnswerController.answer();
 });
+
 
 //數字列協助事件，玩家點選數字列可出現 X 或 O
 document.querySelector('.numbers > ul').addEventListener('click', e => {
