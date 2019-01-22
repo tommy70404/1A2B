@@ -5,22 +5,22 @@ export const createInputArea = () => {
     const markup = `
     <li>
         <span class="icon icon--inputArea-1950"></span>
-        <input class="input input-active" type="text" maxlength="4" value="">
-        <div class="inputHint inputHint-active"></div>
+        <input class="input input--active" type="text" maxlength="4" value="">
+        <div class="inputHint inputHint--active"></div>
     </li>
     `
     document.querySelector('.inputArea > ul').insertAdjacentHTML('beforeend',markup);
 }
 
 export const showHint = (hint) => {
-    document.querySelector('.inputHint-active').innerHTML = `<p class="inputHint--animateIt">${hint[0]}A${hint[1]}B</p>`;
+    document.querySelector('.inputHint--active').innerHTML = `<p class="inputHint--animateIt">${hint[0]}A${hint[1]}B</p>`;
 };
 
 export const delActive = () => {
 
-    document.querySelector('.input-active').setAttribute("disabled","");
-    document.querySelector('.input-active').classList.remove('input-active');
-    document.querySelector('.inputHint-active').classList.remove('inputHint-active')
+    document.querySelector('.input--active').setAttribute("disabled","");
+    document.querySelector('.input--active').classList.remove('input--active');
+    document.querySelector('.inputHint--active').classList.remove('inputHint--active')
 
 }
 

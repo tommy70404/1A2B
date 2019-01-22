@@ -19,7 +19,7 @@ let GameController = (() => {
     let modal = new Modal();
 
     //focus在第一個輸入區
-    document.querySelector(".input-active").focus();
+    document.querySelector(".input--active").focus();
 
     return {
         getRandom: function() {
@@ -53,7 +53,7 @@ let AnswerController = (() => {
             let input = new GetInput();
             let InputNum = input.getInputNum();
             if(!Array.isArray(InputNum)){
-                document.querySelector(".input-active").focus();
+                document.querySelector(".input--active").focus();
                 return Views.report(InputNum);
             }
 
@@ -66,7 +66,7 @@ let AnswerController = (() => {
             console.log(compareAnswer.hint);
             Views.showHint(compareAnswer.hint);
 
-            //新增inputArea 並移除input-active class
+            //新增inputArea 並移除input--active class
             Views.delActive();
             GameController.changeRounds(1);
             if(compareAnswer.hint[0] == 4){
@@ -74,7 +74,7 @@ let AnswerController = (() => {
             }else {
                 Views.createInputArea();
                 Views.report(Math.floor(Math.random() * 4), GameController.getRounds())
-                document.querySelector(".input-active").focus();
+                document.querySelector(".input--active").focus();
             }
         }
     }

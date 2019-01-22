@@ -193,7 +193,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 }
 
 
-.background_image {
+.background__image {
         background: url('../../assets/images/background-100.jpg') top left no-repeat;
         background-size: cover;
     }
@@ -232,7 +232,7 @@ table { border-collapse: collapse; border-spacing: 0; }
     }
 
 
-.playArea_image {
+.playArea__image {
         background: url('../../assets/images/paper-wide.png') center center no-repeat;
         background-size: contain;
         position: absolute;

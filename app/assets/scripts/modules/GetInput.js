@@ -4,7 +4,7 @@
 export default class GetInput {
 
     constructor(){
-        this.InputArea = document.querySelector('.input-active');
+        this.InputArea = document.querySelector('.input--active');
         this.InputNum; 
     }
     
